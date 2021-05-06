@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
+  //  Inside the component decorator we select where we want our app to render 
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  //  This is the path of the file were gonna render
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'bases';
+ 
 }

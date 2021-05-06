@@ -1,0 +1,23 @@
+<p>Listado de Heroes</p>
+
+<ul>
+
+    <li *ngFor='let heroe of heroes; let i = index'>
+        {{i + 1}} - {{heroe}}
+    </li>
+</ul>
+<!--  Ng is a structural directive that allow us to show content in a conditional state
+of the value of the ng is true it will show -->
+<div *ngIf="heroeBorrado ; else noBorrado ">
+    <h3>Heroe borrado</h3>
+    <span>{{heroeBorrado}}</span>
+</div>
+
+<!-- this is what is gonna be rendered in case that ngIf runs the else statement -->
+<!-- They start with a pound and it works as a ID  -->
+<ng-template #noBorrado>
+    <h3>No a borrado nada</h3>
+</ng-template>
+<button (click)='borrarComponente()'>
+    Borrar Componente
+</button>
